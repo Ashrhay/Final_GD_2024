@@ -14,9 +14,20 @@ public class ThirdPersonMovement : MonoBehaviour
     public float gravity = 10.0f;
     private Vector3 jumpDirection = Vector3.zero;
     private float crouchHeight = 6f;
+    
     public GameObject checkpoint1;
     private float checkDis;
-    public TMP_Text checkpointTxt;
+    public TMP_Text checkpoint1Txt;
+    
+    public GameObject checkpoint2;
+    private float checkDis2;
+    public TMP_Text checkpoint2Txt;
+
+
+    void Start()
+    {
+        checkpoint2.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update()
@@ -72,6 +83,13 @@ public class ThirdPersonMovement : MonoBehaviour
     void Checkpoint()
     {
         checkDis = (checkpoint1.transform.position - lizardPlayer.transform.position).magnitude;
-        checkpointTxt.text = "Distance from Checkpoint:" + checkDis;
+        checkpoint1Txt.text = "Distance from Checkpoint:" + checkDis;
+        if (checkDis <= 6)
+        {
+           checkpoint1.SetActive(false);
+            checkpoint2.SetActive(true);
+            checkDis2= (checkpoint2.transform.position - lizardPlayer.transform.position).magnitude;
+            checkpoint2Txt.text = "Distance from Checkpoint:" + checkDis;
+        }
     }
 }
