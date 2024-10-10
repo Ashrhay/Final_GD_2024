@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ThirdPersonMovement : MonoBehaviour
@@ -13,7 +14,9 @@ public class ThirdPersonMovement : MonoBehaviour
     public float gravity = 10.0f;
     private Vector3 jumpDirection = Vector3.zero;
     private float crouchHeight = 6f;
-    
+    public GameObject checkpoint1;
+    private float checkDis;
+    public TMP_Text checkpointTxt;
 
     // Update is called once per frame
     void Update()
@@ -48,6 +51,7 @@ public class ThirdPersonMovement : MonoBehaviour
         }
 
         Crouch();
+        Checkpoint();
 
     }
     
@@ -63,5 +67,11 @@ public class ThirdPersonMovement : MonoBehaviour
             lizardPlayer.height = lizardPlayer.height;
             
         }
+    }
+
+    void Checkpoint()
+    {
+        checkDis = (checkpoint1.transform.position - lizardPlayer.transform.position).magnitude;
+        checkpointTxt.text = "Distance from Checkpoint:" + checkDis;
     }
 }
