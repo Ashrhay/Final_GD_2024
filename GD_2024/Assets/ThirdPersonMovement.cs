@@ -87,9 +87,22 @@ public class ThirdPersonMovement : MonoBehaviour
         if (checkDis <= 6)
         {
            checkpoint1.SetActive(false);
-            checkpoint2.SetActive(true);
-            checkDis2= (checkpoint2.transform.position - lizardPlayer.transform.position).magnitude;
-            checkpoint2Txt.text = "Distance from Checkpoint:" + checkDis;
+            
         }
+        if (checkpoint1.activeSelf.Equals(false))
+        {
+           checkpoint1Txt.gameObject.SetActive(false);
+            checkpoint2.SetActive(true);
+            Debug.Log("chkpoint2_on");
+            checkDis2 = (checkpoint2.transform.position - lizardPlayer.transform.position).magnitude;
+            checkpoint2Txt.text = "Distance from Checkpoint 2:" + checkDis2;
+            
+        }
+
+        if (checkDis2 <= 6)
+        {
+            checkpoint2.SetActive(false);
+        }
+        
     }
 }
