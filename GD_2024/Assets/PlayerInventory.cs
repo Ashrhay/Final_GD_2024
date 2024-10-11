@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerInventory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   public float numberOfShrooms { get; private set; }
 
-    // Update is called once per frame
-    void Update()
+    public UnityEvent<PlayerInventory> OnshroomCollected;
+
+    public void shroomCollected()
     {
-        
+        numberOfShrooms++;
+        OnshroomCollected.Invoke(this);
     }
 }

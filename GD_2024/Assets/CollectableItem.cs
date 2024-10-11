@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class CollectableItem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
+        PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(playerInventory != null)
+        {
+            playerInventory.shroomCollected();
+            gameObject.SetActive(false);
+        }
     }
 }
