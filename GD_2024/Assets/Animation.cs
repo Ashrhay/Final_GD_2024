@@ -43,8 +43,7 @@ public class Animation : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("Triggering jump animation");
-                mAnimator.SetTrigger("Jump");
+                Debug.Log("Triggering jump animation");                mAnimator.SetTrigger("Jump");
             }
         }
     }
