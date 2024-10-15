@@ -13,7 +13,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float jumpSpeed = 2.0f;
     public float gravity = 10.0f;
     private Vector3 jumpDirection = Vector3.zero;
-    private float crouchHeight = 6f;
+    private float crouchHeight = 8f;
     
     public GameObject checkpoint1;
     private float checkDis;
@@ -75,8 +75,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.C))
         {
-            lizardPlayer.height = lizardPlayer.height;
-            
+            lizardPlayer.height = 11f;
         }
     }
 
