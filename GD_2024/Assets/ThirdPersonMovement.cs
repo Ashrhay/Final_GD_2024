@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
@@ -22,11 +23,19 @@ public class ThirdPersonMovement : MonoBehaviour
     public GameObject checkpoint2;
     private float checkDis2;
     public TMP_Text checkpoint2Txt;
+    
+    //Player Stats
+    public int playerHealth = 100;
+    public Slider healthSlider;
+    public int wormDmgDone = 1;
+    
 
 
     void Start()
     {
         checkpoint2.SetActive(false);
+        healthSlider.maxValue = playerHealth;
+        healthSlider.value = playerHealth;
     }
 
     // Update is called once per frame
@@ -76,6 +85,20 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.C))
         {
             lizardPlayer.height = 11f;
+        }
+    }
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag=="Enemy")
+        {
+            playerHealth = playerHealth - wormDmgDone;
+            healthSlider.value = playerHealth;
+            
+        }
+        if (playerHealth == 0)
+        {
+           //Add UI for dead player and turn game off 
+            Debug.Log("Player Died");
         }
     }
 
