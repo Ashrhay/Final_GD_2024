@@ -28,6 +28,13 @@ public class Enemies : MonoBehaviour
     public float attackRange;
     public bool playerInAttackRange;
     public bool playerInSightRange;
+    
+    //Shooting
+    public GameObject bullet;
+    private float wormHealth=5;
+    private float bulletDmg=1;
+    public GameObject enemyworm;
+    
 
     
 
@@ -130,12 +137,18 @@ public class Enemies : MonoBehaviour
         AlreadyAttacked = false;
     }
 
-    void TakeDamage()
+    private void OnCollisionEnter(Collision shot)
     {
+        if (shot.gameObject.CompareTag("Enemy"))
+        {
+            wormHealth= wormHealth - bulletDmg;
+            Debug.Log("worm damaged");
+        }
 
+        if (wormHealth == 0)
+        {
+            Destroy(enemyworm);
+            
+        }
     }
-
-  
-
-
 }

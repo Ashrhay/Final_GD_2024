@@ -33,5 +33,7 @@ public class Shooting : MonoBehaviour
         // Optionally, destroy the flash effect after a short duration
         Destroy(flashEffect, 0.5f); // Adjust the duration as needed
     }
+
+    
 }
 
