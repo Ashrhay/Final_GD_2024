@@ -85,8 +85,8 @@ public class Enemies : MonoBehaviour
     void SearchForWalkpoint()
     {
         //Set Random X and Z values as y values will send worm flying 
-        float randomZ = Random.Range(-5, 5);
-        float randomX = Random.Range(-5, 5);
+        float randomZ = Random.Range(-10, 10);
+        float randomX = Random.Range(-10, 10);
         walkpoint = new Vector3(transform.position.x +randomX, transform.position.y,
             transform.position.z+randomZ );
 
