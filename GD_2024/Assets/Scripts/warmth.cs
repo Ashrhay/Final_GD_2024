@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class warmth : MonoBehaviour
 {
     public Image heatBar;
-
+    public CharacterController lizardPlayer;
     public float maxTemp;
     public float currentTemp;
-    public float heatDepleateRate = 1f;
+    public float heatDepleateRate = 0.5f;
     public float heatRefillRate = 5f;
     void Start()
     {
@@ -44,11 +44,12 @@ public class warmth : MonoBehaviour
         heatBar.fillAmount = currentTemp / maxTemp;
     }
 
-    private void OnCollisionStay(Collision collision)
+    void OnControllerColliderHit(ControllerColliderHit collision)
     {
         // Check if the player is colliding with an air pocket
-        if (collision.gameObject.CompareTag("pod"))
+        if (collision.gameObject.tag=="pod")
         {
+            Debug.Log("Heat Up ");
             // Increase oxygen level by the refill rate
             currentTemp += heatRefillRate * Time.deltaTime;
             currentTemp = Mathf.Clamp(currentTemp, 0, maxTemp);
