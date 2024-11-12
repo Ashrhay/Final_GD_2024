@@ -15,6 +15,8 @@ public class Shooting : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+           
+            
         }
     }
 
@@ -22,10 +24,11 @@ public class Shooting : MonoBehaviour
     {
         // Instantiate the bullet at the spawn point's position and rotation
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-
+       
         // Get the Rigidbody component and set its velocity
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.velocity = bulletSpawnPoint.forward * bulletSpeed; // Move the bullet forward
+        Destroy(bullet,1f); // Destroy bullet after deployed 
 
         // Instantiate the flash effect at the spawn point
         GameObject flashEffect = Instantiate(flashEffectPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
+    //Character 
     public CharacterController lizardPlayer;
     public float speed = 6f;
     private float turnSmooth = 0.1f;
@@ -16,6 +17,7 @@ public class ThirdPersonMovement : MonoBehaviour
     private Vector3 jumpDirection = Vector3.zero;
     private float crouchHeight = 6f;
     
+    //Checkpoints
     public GameObject checkpoint1;
     private float checkDis;
     public TMP_Text checkpoint1Txt;
@@ -23,6 +25,14 @@ public class ThirdPersonMovement : MonoBehaviour
     public GameObject checkpoint2;
     private float checkDis2;
     public TMP_Text checkpoint2Txt;
+
+    public GameObject checkpoint3;
+    private float checkDis3;
+    public TMP_Text checkpoint3Txt;
+
+    public GameObject checkpoint4;
+    private float checkDis4;
+    public TMP_Text checkpoint4Txt;
     
     //Player Stats
     public int playerHealth = 100;
@@ -33,7 +43,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Start()
     {
+        checkpoint1.SetActive(true);
         checkpoint2.SetActive(false);
+        checkpoint3.SetActive(false);
+        checkpoint4.SetActive(false);
+        
         healthSlider.maxValue = playerHealth;
         healthSlider.value = playerHealth;
     }
@@ -104,26 +118,75 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Checkpoint()
     {
-        checkDis = (checkpoint1.transform.position - lizardPlayer.transform.position).magnitude;
-        checkpoint1Txt.text = "Distance from Checkpoint:" + checkDis;
-        if (checkDis <= 6)
+        if (checkpoint1.activeSelf.Equals(true) && checkpoint2.activeSelf.Equals(false) &&
+            checkpoint3.activeSelf.Equals(false) && checkpoint4.activeSelf.Equals(false))
         {
-           checkpoint1.SetActive(false);
+            checkDis = (checkpoint1.transform.position - lizardPlayer.transform.position).magnitude;
+            checkpoint1Txt.text = "Distance from Checkpoint:" + checkDis;
             
+            if (checkDis <= 6)
+            {
+                checkpoint1.SetActive(false);
+                checkpoint2.SetActive(true);
+
+            }
         }
-        if (checkpoint1.activeSelf.Equals(false))
+
+        if (checkpoint1.activeSelf.Equals(false) && checkpoint2.activeSelf.Equals(true) &&
+            checkpoint3.activeSelf.Equals(false)
+            && checkpoint4.activeSelf.Equals(false))
         {
-           checkpoint1Txt.gameObject.SetActive(false);
-            checkpoint2.SetActive(true);
-            Debug.Log("chkpoint2_on");
+            checkpoint1Txt.gameObject.SetActive(false);
+            checkpoint2Txt.gameObject.SetActive(true);
             checkDis2 = (checkpoint2.transform.position - lizardPlayer.transform.position).magnitude;
             checkpoint2Txt.text = "Distance from Checkpoint 2:" + checkDis2;
             
+            if (checkDis2 <= 6)
+            {
+                checkpoint2.SetActive(false);
+                checkpoint3.SetActive(true);
+            }
         }
 
-        if (checkDis2 <= 6)
+        if (checkpoint1.activeSelf.Equals(false) && checkpoint2.activeSelf.Equals(false) &&
+            checkpoint3.activeSelf.Equals(true)
+            && checkpoint4.activeSelf.Equals(false))
         {
-            checkpoint2.SetActive(false);
+            checkpoint2Txt.gameObject.SetActive(false);
+
+            checkpoint3Txt.gameObject.SetActive(true);
+            checkDis3 = (checkpoint3.transform.position - lizardPlayer.transform.position).magnitude;
+            checkpoint3Txt.text = "Distance from Checkpoint 3:" + checkDis3;
+
+            if (checkDis3 <= 6)
+            {
+                checkpoint3.SetActive(false);
+                checkpoint4.SetActive(true);
+
+            }
+        }
+
+        if (checkpoint1.activeSelf.Equals(false) && checkpoint2.activeSelf.Equals(false) &&
+            checkpoint3.activeSelf.Equals(false) && checkpoint4.activeSelf.Equals(true))
+        {
+            
+            checkpoint3Txt.gameObject.SetActive(false);
+            checkpoint4Txt.gameObject.SetActive(true);
+            checkDis4 = (checkpoint4.transform.position - lizardPlayer.transform.position).magnitude;
+            checkpoint4Txt.text = "Distance from Checkpoint 4:" + checkDis4;
+
+            if (checkDis4 <= 6)
+            {
+                checkpoint4.SetActive(false);
+            }
+            
+        }
+
+        if (checkpoint1.activeSelf.Equals(false) && checkpoint2.activeSelf.Equals(false) &&
+            checkpoint3.activeSelf.Equals(false) && checkpoint4.activeSelf.Equals(false))
+        {
+            Debug.Log("End");
+            checkpoint4Txt.gameObject.SetActive(false);
         }
         
     }

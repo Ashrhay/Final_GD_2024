@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class warmth : MonoBehaviour
 {
     public Image heatBar;
-    public CharacterController lizardPlayer;
     public float maxTemp;
     public float currentTemp;
     public float heatDepleateRate = 0.5f;
