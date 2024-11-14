@@ -35,9 +35,9 @@ public class ThirdPersonMovement : MonoBehaviour
     public TMP_Text checkpoint4Txt;
     
     //Player Stats
-    public int playerHealth = 100;
+    public float playerHealth = 100;
     public Slider healthSlider;
-    public int wormDmgDone = 1;
+    public float wormDmgDone = 1;
     
 
 

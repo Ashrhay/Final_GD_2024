@@ -9,6 +9,7 @@ public class warmth : MonoBehaviour
     public float maxTemp;
     public float currentTemp;
     public float heatDepleateRate = 0.5f;
+    public float healthRefillRate = 3f;
     public float heatRefillRate = 5f;
     void Start()
     {
@@ -45,6 +46,7 @@ public class warmth : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit collision)
     {
+        ThirdPersonMovement thirdPM = gameObject.GetComponent<ThirdPersonMovement>();
         // Check if the player is colliding with an air pocket
         if (collision.gameObject.tag=="pod")
         {
@@ -52,6 +54,8 @@ public class warmth : MonoBehaviour
             // Increase oxygen level by the refill rate
             currentTemp += heatRefillRate * Time.deltaTime;
             currentTemp = Mathf.Clamp(currentTemp, 0, maxTemp);
+            thirdPM.playerHealth = thirdPM.playerHealth + healthRefillRate*Time.deltaTime;
+            thirdPM.healthSlider.value = thirdPM.playerHealth;
         }
     }
 }

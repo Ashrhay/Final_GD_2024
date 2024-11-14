@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
@@ -9,14 +10,27 @@ public class Shooting : MonoBehaviour
     public float bulletSpeed = 20f; // Speed of the bullet
     public GameObject flashEffectPrefab;
 
+    public float noOfBullets; // Number of Bullets
+    public TMP_Text ammoTxt;
+    public GameObject Ammo;
+
+    void Start()
+    {
+        noOfBullets = 10f;
+        ammoTxt.text = "" + noOfBullets;
+    }
     void Update()
     {
         // Check for shooting input (e.g., left mouse button)
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && noOfBullets>0)
         {
             Shoot();
-           
-            
+            noOfBullets = noOfBullets - 1;
+            ammoTxt.text = "" + noOfBullets;
+            if (noOfBullets <= 0)
+            {
+                ammoTxt.text = "Out of Ammo";
+            }
         }
     }
 
@@ -36,6 +50,19 @@ public class Shooting : MonoBehaviour
         // Optionally, destroy the flash effect after a short duration
         Destroy(flashEffect, 0.5f); // Adjust the duration as needed
     }
+
+    void OnControllerColliderHit(ControllerColliderHit shoot)
+    {
+        if (shoot.gameObject.tag == "Bullet")
+        {
+            Debug.Log("Ammo Up");
+            noOfBullets = noOfBullets + 1f;
+            Destroy(Ammo);
+            ammoTxt.text = "" + noOfBullets;
+        }
+    }
+
+    
 
     
 }
