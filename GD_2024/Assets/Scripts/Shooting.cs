@@ -16,7 +16,7 @@ public class Shooting : MonoBehaviour
 
     void Start()
     {
-        noOfBullets = 10f;
+        noOfBullets = 20f;
         ammoTxt.text = "" + noOfBullets;
     }
     void Update()
@@ -57,7 +57,7 @@ public class Shooting : MonoBehaviour
         {
             Debug.Log("Ammo Up");
             noOfBullets = noOfBullets + 1f;
-            Destroy(Ammo);
+            Destroy(shoot.gameObject);
             ammoTxt.text = "" + noOfBullets;
         }
     }
