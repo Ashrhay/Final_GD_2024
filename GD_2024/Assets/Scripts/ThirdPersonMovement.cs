@@ -36,8 +36,13 @@ public class ThirdPersonMovement : MonoBehaviour
     
     //Player Stats
     public float playerHealth = 100;
+    public float maxHealth = 100;
     public Slider healthSlider;
     public float wormDmgDone = 1;
+
+    //Mushroom Health;
+    public float mushroomHealValue = 20;
+    public GameObject healEffect; //particle effect
     
 
 
@@ -109,11 +114,32 @@ public class ThirdPersonMovement : MonoBehaviour
             healthSlider.value = playerHealth;
             
         }
+        if (hit.gameObject.tag == "Mushroom")
+        {
+            HealPlayer(mushroomHealValue);
+            Instantiate(healEffect, hit.transform.position, Quaternion.identity);
+            Destroy(hit.gameObject);
+        }
         if (playerHealth == 0)
         {
            //Add UI for dead player and turn game off 
             Debug.Log("Player Died");
         }
+    }
+
+    void HealPlayer(float healAmount)
+    {
+        playerHealth += healAmount;
+        if (playerHealth > maxHealth)
+        {
+            playerHealth = maxHealth;
+        }
+        UpdateHealthUI();
+    }
+
+    void UpdateHealthUI()
+    {
+        healthSlider.value = playerHealth;
     }
 
     void Checkpoint()
