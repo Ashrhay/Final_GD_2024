@@ -13,7 +13,8 @@ public class Shooting : MonoBehaviour
     public float noOfBullets; // Number of Bullets
     public TMP_Text ammoTxt;
     public GameObject Ammo;
-
+    public AudioSource audioSource;
+    public AudioClip gunNoise;
     void Start()
     {
         noOfBullets = 20f;
@@ -47,8 +48,18 @@ public class Shooting : MonoBehaviour
         // Instantiate the flash effect at the spawn point
         GameObject flashEffect = Instantiate(flashEffectPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
 
+        if (audioSource != null && gunNoise != null)
+        {
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Gunshot sound or AudioSource is not assigned!");
+        }
         // Optionally, destroy the flash effect after a short duration
         Destroy(flashEffect, 0.5f); // Adjust the duration as needed
+
+        
     }
 
     void OnControllerColliderHit(ControllerColliderHit shoot)
