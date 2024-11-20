@@ -16,35 +16,48 @@ public class Animation : MonoBehaviour
     {
         if(mAnimator != null)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
                 Debug.Log("Triggering walk animation");
                 mAnimator.SetTrigger("Walk");
             }
+            else
+            {
+                mAnimator.SetTrigger("Idle");
+            }
 
-            if (Input.GetKeyDown(KeyCode.D))
+
+            if (Input.GetKey(KeyCode.D))
             {
                 Debug.Log("Triggering walk animation");
                 mAnimator.SetTrigger("Walk");
             }
-
-            if (Input.GetKeyDown(KeyCode.S))
+          
+            if (Input.GetKey(KeyCode.S))
             {
                 Debug.Log("Triggering walk animation");
                 mAnimator.SetTrigger("Walk");
 
             }
+          
 
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))
             {
                 Debug.Log("Triggering walk animation");
                 mAnimator.SetTrigger("Walk");
             }
+           
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space))
             {
-                Debug.Log("Triggering jump animation");                mAnimator.SetTrigger("Jump");
+                Debug.Log("Triggering jump animation");           
+                mAnimator.SetTrigger("Jump");
             }
+            
+        }
+        else
+        {
+            mAnimator.SetTrigger("Idle");
         }
     }
 }
