@@ -16,8 +16,12 @@ public class HidePanel : MonoBehaviour
 
     private IEnumerator ClosedPanelDelayed()
     {
-        yield return new WaitForSeconds(3f);
-        loadingScreen.SetActive(false);
-        Game.SetActive(true);
+        if (Game.activeSelf.Equals(false))
+        {
+            yield return new WaitForSeconds(3f);
+            loadingScreen.SetActive(false);
+            Game.SetActive(true); 
+        }
+        
     }
 }

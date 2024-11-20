@@ -16,6 +16,8 @@ public class warmth : MonoBehaviour
     private bool hasPlayedWarning = false; // To ensure sound only plays once
     public AudioSource warningSound; // Reference to the sound effect
     public GameObject tooCold;
+    public GameObject game;
+   
 
     void Start()
     {
@@ -24,6 +26,7 @@ public class warmth : MonoBehaviour
         if (tooCold != null)
         {
             tooCold.SetActive(false);
+           
         }
     }
 
@@ -112,6 +115,10 @@ public class warmth : MonoBehaviour
         if (tooCold != null)
         {
             tooCold.SetActive(true);
+            game.SetActive(false);
+            currentTemp = maxTemp;
+
+
         }
         else
         {

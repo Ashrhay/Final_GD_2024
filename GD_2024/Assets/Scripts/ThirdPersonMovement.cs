@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -48,6 +49,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Start()
     {
+        
         checkpoint1.SetActive(true);
         checkpoint2.SetActive(false);
         checkpoint3.SetActive(false);
@@ -57,12 +59,15 @@ public class ThirdPersonMovement : MonoBehaviour
         healthSlider.value = playerHealth;
     }
 
+   
+
     // Update is called once per frame
     void Update()
     {
+        CharacterCenter();
         float horizontal = Input.GetAxisRaw("Horizontal");
         //going between -1 and 1 using A&D
-        float vertical = Input.GetAxisRaw("Vertical"); 
+        float vertical = Input.GetAxisRaw("Vertical");
         //going between -1 and 1 using W&S
         if (lizardPlayer.isGrounded && Input.GetButton("Jump"))
         {
@@ -92,6 +97,19 @@ public class ThirdPersonMovement : MonoBehaviour
         Crouch();
         Checkpoint();
 
+    }
+    void CharacterCenter()
+    {
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) ||Input.GetKey(KeyCode.A) || Input.GetKey(
+                KeyCode.D))
+        {
+            lizardPlayer.center = new Vector3(1, (float)4, -1) ;
+        }
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            lizardPlayer.center = new Vector3(1, (float)5.2, -1) ;
+        }
+        
     }
     
     void Crouch()
