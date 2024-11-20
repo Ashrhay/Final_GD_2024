@@ -44,6 +44,9 @@ public class ThirdPersonMovement : MonoBehaviour
     //Mushroom Health;
     public float mushroomHealValue = 20;
     public GameObject healEffect; //particle effect
+
+    //UI
+    public GameObject losePanel; 
     
 
 
@@ -140,8 +143,21 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         if (playerHealth == 0)
         {
-           //Add UI for dead player and turn game off 
+            GameOver();
             Debug.Log("Player Died");
+        }
+    }
+    void GameOver()
+    {
+        Time.timeScale = 0; 
+
+        if(losePanel != null)
+        {
+            losePanel.SetActive(true); 
+        }
+        else
+        {
+            Debug.LogError("Loser Panel is not assigned in the Inspector!");
         }
     }
 
