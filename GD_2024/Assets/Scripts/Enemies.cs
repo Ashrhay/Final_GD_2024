@@ -13,6 +13,7 @@ public class Enemies : MonoBehaviour
     public Transform player;
     public NavMeshAgent worm;
     public LayerMask whatIsGround, whatIsPlayer;
+    public Animator EnemyAnimation;
 
     //Worm Patrolling
     public Vector3 walkpoint;
@@ -123,8 +124,8 @@ public class Enemies : MonoBehaviour
         if (AlreadyAttacked == false)
         {
             //Attack code animation activate here 
-           
 
+            EnemyAnimation.SetTrigger("Attack");
 
 
             AlreadyAttacked = true;
