@@ -119,13 +119,14 @@ public class Enemies : MonoBehaviour
         //Once enemy is by player, stop moving
         worm.SetDestination(transform.position);
         transform.LookAt(player);
+      
        
         Debug.Log("Code working:Attack");
         if (AlreadyAttacked == false)
         {
             //Attack code animation activate here 
 
-            EnemyAnimation.SetTrigger("Attack");
+           EnemyAnimation.SetTrigger("Attack");
 
 
             AlreadyAttacked = true;
@@ -142,14 +143,12 @@ public class Enemies : MonoBehaviour
     {
         if (shot.gameObject.CompareTag("Enemy"))
         {
-            wormHealth= wormHealth - bulletDmg;
+           // wormHealth= wormHealth - bulletDmg;
             Debug.Log("worm damaged");
-        }
-
-        if (wormHealth <= 0)
-        {
             Destroy(enemyworm);
             Instantiate(destroyEffect, enemyworm.transform.position, enemyworm.transform.rotation);
         }
+
+       
     }
 }
