@@ -246,7 +246,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -497,7 +497,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -679,7 +679,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -1067,7 +1067,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -6439,7 +6439,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -6488,6 +6488,26 @@ PrefabInstance:
     - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 195.45999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 195.45999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 195.45999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 108.829834
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 88.212296
       objectReference: {fileID: 0}
     - target: {fileID: 6095196586634140576, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
       propertyPath: m_Name
@@ -6605,7 +6625,7 @@ RectTransform:
   m_GameObject: {fileID: 300969500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7967, y: 0.7967, z: 0.7967}
+  m_LocalScale: {x: 1.6698831, y: 1.6698831, z: 1.6698831}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1538740080}
@@ -6613,7 +6633,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 664, y: -105}
+  m_AnchoredPosition: {x: 1634.9999, y: -105}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &300969502
@@ -7068,7 +7088,7 @@ RectTransform:
   m_GameObject: {fileID: 320861813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7967, y: 0.7967, z: 0.7967}
+  m_LocalScale: {x: 1.64168, y: 1.64168, z: 1.64168}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1139014791}
@@ -7077,7 +7097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 713, y: 150}
+  m_AnchoredPosition: {x: 1306, y: 378}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320861815
@@ -7336,7 +7356,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -8040,7 +8060,7 @@ MonoBehaviour:
   EnemyAnimation: {fileID: 1400890947}
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 5
-  sightRange: 12
+  sightRange: 15
   attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
@@ -8154,7 +8174,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -8362,7 +8382,7 @@ RectTransform:
   m_GameObject: {fileID: 505868950}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 22}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6099, y: 1.6099, z: 1.6099}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1538740080}
@@ -8370,7 +8390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248.01163, y: -154.5}
+  m_AnchoredPosition: {x: 647, y: -417}
   m_SizeDelta: {x: 108.8231, y: 77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505868952
@@ -8695,7 +8715,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -8873,7 +8893,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -8940,7 +8960,7 @@ RectTransform:
   m_GameObject: {fileID: 553898986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7336, y: 1.7336, z: 1.7336}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1538740080}
@@ -8948,7 +8968,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -327.41, y: -139.10345}
+  m_AnchoredPosition: {x: -855.41003, y: -392.10345}
   m_SizeDelta: {x: 110.374, y: 103.7931}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553898988
@@ -9026,7 +9046,7 @@ RectTransform:
   m_GameObject: {fileID: 568208283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7602, y: 1.7602, z: 1.7602}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1538740080}
@@ -9034,7 +9054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -51.902985, y: 98.897995}
+  m_AnchoredPosition: {x: -142, y: 98.897995}
   m_SizeDelta: {x: 111.8059, y: 105.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &568208285
@@ -9261,7 +9281,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -9669,7 +9689,7 @@ RectTransform:
   m_GameObject: {fileID: 694384957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9546, y: 1.9546, z: 1.9546}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2087369364}
@@ -9679,7 +9699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33.513, y: 393}
+  m_AnchoredPosition: {x: -477.70697, y: 614}
   m_SizeDelta: {x: 227.02, y: 47.6745}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694384959
@@ -10246,7 +10266,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 498.72488
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -10439,7 +10459,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -11396,7 +11416,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -11863,7 +11883,7 @@ RectTransform:
   m_GameObject: {fileID: 986159889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9546, y: 1.9546, z: 1.9546}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 968024154}
@@ -11871,7 +11891,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 54.4, y: 393}
+  m_AnchoredPosition: {x: -456.82, y: 614}
   m_SizeDelta: {x: 192.05, y: 32.535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986159891
@@ -11983,7 +12003,7 @@ RectTransform:
   m_GameObject: {fileID: 1032072594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7602, y: 1.7602, z: 1.7602}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1538740080}
@@ -11991,7 +12011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -102, y: 85}
+  m_AnchoredPosition: {x: -192.09717, y: 85}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032072596
@@ -12207,7 +12227,7 @@ RectTransform:
   m_GameObject: {fileID: 1048586066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04, y: 1.04, z: 1.04}
+  m_LocalScale: {x: 2.583799, y: 2.583799, z: 2.583799}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1538740080}
@@ -12215,7 +12235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -218, y: -158}
+  m_AnchoredPosition: {x: -651.99994, y: -438.00003}
   m_SizeDelta: {x: 72.1611, y: 31.5401}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048586068
@@ -12391,7 +12411,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -12524,7 +12544,7 @@ RectTransform:
   m_GameObject: {fileID: 1113806790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7967, y: 0.7967, z: 0.7967}
+  m_LocalScale: {x: 1.6698831, y: 1.6698831, z: 1.6698831}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1538740080}
@@ -12532,7 +12552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 663, y: -104}
+  m_AnchoredPosition: {x: 1633.9999, y: -104}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1113806792
@@ -12867,7 +12887,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -13245,7 +13265,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -13354,7 +13374,7 @@ RectTransform:
   m_GameObject: {fileID: 1190387042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7967, y: 0.7967, z: 0.7967}
+  m_LocalScale: {x: 1.6698831, y: 1.6698831, z: 1.6698831}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1538740080}
@@ -13362,7 +13382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 664, y: -105}
+  m_AnchoredPosition: {x: 1634.9999, y: -105}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190387044
@@ -14174,7 +14194,7 @@ RectTransform:
   m_GameObject: {fileID: 1340029225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9546, y: 1.9546, z: 1.9546}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 206473929}
@@ -14186,7 +14206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -326.78, y: 136}
+  m_AnchoredPosition: {x: -838, y: 357}
   m_SizeDelta: {x: 140.0506, y: 122.30002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1345861860
@@ -14836,7 +14856,7 @@ RectTransform:
   m_GameObject: {fileID: 1368615345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20960185, y: 0.20960185, z: 0.20960185}
+  m_LocalScale: {x: 0.38376, y: 0.38376, z: 0.38376}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 816160086}
@@ -14845,7 +14865,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 282, y: -17.5}
+  m_AnchoredPosition: {x: 809, y: -17.50003}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368615347
@@ -15652,7 +15672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -15965,7 +15985,7 @@ RectTransform:
   m_GameObject: {fileID: 1561848603}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04, y: 1.04, z: 1.04}
+  m_LocalScale: {x: 2.583799, y: 2.583799, z: 2.583799}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1538740080}
@@ -15973,7 +15993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -239, y: -158}
+  m_AnchoredPosition: {x: -673, y: -438}
   m_SizeDelta: {x: 72.1611, y: 31.5401}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1561848605
@@ -16300,7 +16320,7 @@ RectTransform:
   m_GameObject: {fileID: 1618450894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9546, y: 1.9546, z: 1.9546}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 968024154}
@@ -16308,7 +16328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 51, y: 393}
+  m_AnchoredPosition: {x: -460.22, y: 614}
   m_SizeDelta: {x: 192.0464, y: 25.9098}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618450896
@@ -16405,7 +16425,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -16559,7 +16579,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -17296,7 +17316,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -18121,7 +18141,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -18239,7 +18259,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -19029,7 +19049,7 @@ MonoBehaviour:
   walkpoint: {x: 0, y: 0, z: 0}
   timeBetweenAttacks: 1
   sightRange: 15
-  attackRange: 10
+  attackRange: 8
   playerInAttackRange: 0
   playerInSightRange: 0
   bullet: {fileID: 9060390446856317863, guid: 5f1244eb2bcd8a740a434f8fca037d7e, type: 3}
@@ -19310,7 +19330,7 @@ RectTransform:
   m_GameObject: {fileID: 2021165427}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7967, y: 0.7967, z: 0.7967}
+  m_LocalScale: {x: 1.6698831, y: 1.6698831, z: 1.6698831}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1538740080}
@@ -19318,7 +19338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 665, y: -105}
+  m_AnchoredPosition: {x: 1636, y: -105}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021165429
@@ -21275,6 +21295,26 @@ PrefabInstance:
     - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 195.45999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 195.45999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 195.45999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 108.829834
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544791298930896646, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 88.212296
       objectReference: {fileID: 0}
     - target: {fileID: 6095196586634140576, guid: 7a252121e3acfed4d926723c9f6d27d9, type: 3}
       propertyPath: m_Name

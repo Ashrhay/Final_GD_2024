@@ -25,8 +25,8 @@ public class Enemies : MonoBehaviour
     private bool AlreadyAttacked;
 
     //States
-    public float sightRange;
-    public float attackRange;
+    public float sightRange = 15f;
+    public float attackRange = 8f;
     public bool playerInAttackRange;
     public bool playerInSightRange;
     
@@ -37,7 +37,7 @@ public class Enemies : MonoBehaviour
     public GameObject enemyworm;
     public GameObject destroyEffect;
 
-    
+  
 
 
 
