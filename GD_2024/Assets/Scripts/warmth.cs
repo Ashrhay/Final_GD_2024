@@ -117,7 +117,7 @@ public class warmth : MonoBehaviour
         if (tooCold != null)
         {
             tooCold.SetActive(true);
-           
+            SceneManager.LoadScene("FreezeScene");
         }
         else
         {

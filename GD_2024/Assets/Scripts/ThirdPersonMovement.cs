@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public GameObject healEffect; //particle effect
 
     //UI
-    public GameObject losePanel; 
+   
     
 
 
@@ -149,15 +150,9 @@ public class ThirdPersonMovement : MonoBehaviour
     }
     void GameOver()
     {
-        Time.timeScale = 0; 
-
-        if(losePanel != null)
+        if (playerHealth == 0)
         {
-            losePanel.SetActive(true); 
-        }
-        else
-        {
-            Debug.LogError("Loser Panel is not assigned in the Inspector!");
+            SceneManager.LoadScene("LoseScene");
         }
     }
 
