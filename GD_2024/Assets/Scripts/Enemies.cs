@@ -35,7 +35,7 @@ public class Enemies : MonoBehaviour
     private float wormHealth=1;
     private float bulletDmg=1;
     public GameObject enemyworm;
-    
+    public GameObject destroyEffect;
 
     
 
@@ -146,10 +146,10 @@ public class Enemies : MonoBehaviour
             Debug.Log("worm damaged");
         }
 
-        if (wormHealth == 0)
+        if (wormHealth <= 0)
         {
             Destroy(enemyworm);
-            
+            Instantiate(destroyEffect, enemyworm.transform.position, enemyworm.transform.rotation);
         }
     }
 }
