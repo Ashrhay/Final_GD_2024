@@ -106,26 +106,22 @@ public class warmth : MonoBehaviour
             hasPlayedWarning = false; // Reset the flag when warmth goes back above half
         }
     }
-   
+
 
     private void TriggerGameOver()
     {
-        // Pause the game
-        Time.timeScale = 0;
+        // Load the FreezeScene
+        SceneManager.LoadScene("FreezeScene");
 
-        // Activate the "You Lose" canvas
+        // Optionally activate the "tooCold" object if you want something to show briefly before the scene transition
         if (tooCold != null)
         {
             tooCold.SetActive(true);
-            SceneManager.LoadScene("FreezeScene");
-        }
-        else
-        {
-            Debug.LogWarning("You Lose Canvas is not assigned!");
         }
 
-        Debug.Log("Too cold, you lose!");
+        Debug.Log("Too cold, transitioning to FreezeScene.");
     }
+    
     void OnControllerColliderHit(ControllerColliderHit collision)
         {
             ThirdPersonMovement thirdPM = gameObject.GetComponent<ThirdPersonMovement>();
