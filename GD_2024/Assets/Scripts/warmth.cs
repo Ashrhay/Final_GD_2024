@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class warmth : MonoBehaviour
 {
@@ -16,8 +17,8 @@ public class warmth : MonoBehaviour
     private bool hasPlayedWarning = false; // To ensure sound only plays once
     public AudioSource warningSound; // Reference to the sound effect
     public GameObject tooCold;
-    public GameObject game;
-   
+    
+    
 
     void Start()
     {
@@ -29,8 +30,7 @@ public class warmth : MonoBehaviour
            
         }
     }
-
-
+    
     private void Update()
     {
         // Decrease oxygen over time
@@ -106,6 +106,8 @@ public class warmth : MonoBehaviour
             hasPlayedWarning = false; // Reset the flag when warmth goes back above half
         }
     }
+   
+
     private void TriggerGameOver()
     {
         // Pause the game
@@ -115,10 +117,7 @@ public class warmth : MonoBehaviour
         if (tooCold != null)
         {
             tooCold.SetActive(true);
-            game.SetActive(false);
-            currentTemp = maxTemp;
-
-
+           
         }
         else
         {

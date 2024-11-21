@@ -32,7 +32,7 @@ public class Enemies : MonoBehaviour
     
     //Shooting
     public GameObject bullet;
-    private float wormHealth=5;
+    private float wormHealth=1;
     private float bulletDmg=1;
     public GameObject enemyworm;
     
